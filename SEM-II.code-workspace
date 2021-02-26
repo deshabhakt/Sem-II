@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "NumericalMethods/NM-Programs"
+		},
+		{
+			"path": "MachineLearning/ML-Programs"
+		}
+	],
+	"settings": {
+		"python.pythonPath": "C:\\Users\\Deshabhakt\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+	}
+}

@@ -1,0 +1,30 @@
+
+GT-Ass1-q3: https://www.youtube.com/watch?v=728bZWwTbf8
+
+ML-R
+GT-R
+
+22/02/2021:
+ML:
+	Write QR decomposition program
+
+
+18/02/2021:
+ML:
+    Nullity Theorem
+GraphTheory:
+    Assignment 1 - (has to be in typed format)
+
+17/02/2021
+Advanced Data Science:
+	Master Tails Theorem (theorem 2.5 in G Strang's book)
+
+
+
+-11/2/2021
+NumericalMethods-
+	Beaware of Chandani Ma'am
+MachineLearning-
+	What is optane?
+GraphTheory-
+	1.Diff between induced and spanning subgraph
