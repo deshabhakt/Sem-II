@@ -1,5 +1,12 @@
+01/03/2021:
+	ADS-> Learn JohnsonLindonstraus lemma , Separating Gaussians
 
-GT-Ass1-q3: https://www.youtube.com/watch?v=728bZWwTbf8
+
+
+
+
+
+GT-Ass1-q3: https://www.youtube.com/watch?v=728bZWwTbf8 -->Every UV walk Contains UV path.
 
 ML-R
 GT-R
