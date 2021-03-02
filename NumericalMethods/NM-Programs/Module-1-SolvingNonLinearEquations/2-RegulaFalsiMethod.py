@@ -1,8 +1,6 @@
 from math import *
 
-# Defining Function
-def f(x):
-    return -(x**3)-cos(x)
+
 
 # Implementing False Position Method
 def falsePosition(x0,x1,e,N):
@@ -30,16 +28,19 @@ def falsePosition(x0,x1,e,N):
 
     print('\nRequired root is: %0.8f' % x2)
 
+# Defining Function
+def f(x):
+    return -(x**3)-cos(x)
 
 # Input Section
 # x0 = float(input('First Guess: '))
 # x1 = float(input('Second Guess: '))
 # e = float(input('Tolerable Error: '))
 # N = int(input('Number of Steps: '))
-x0=-1
-x1=0
-e=0.00001
-N=20
+x0 = -1
+x1 = 0
+e  = 0.00001
+N  = 20
 
 # Checking Correctness of initial guess values and false positioning
 if f(x0) * f(x1) > 0.0:

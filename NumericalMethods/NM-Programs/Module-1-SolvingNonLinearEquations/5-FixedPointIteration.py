@@ -1,51 +1,46 @@
 # Fixed Point Iteration Method
 # Importing math to use sqrt function
-from math import *
+from mpmath import *
+
+MaxIterations = 1000
 
 def f(x):
-    return (x**4)-3*(x**2)-3
+    return ((x**4) - 3*(x**2) - 3)
 
 # Re-writing f(x)=0 to x = g(x)
 def g(x):
-    return (3*(x**2)+3)**(1/4)
+    return (-3*pow(x,3) + pow(x,4))/3
 
 # Implementing Fixed Point Iteration Method
-def fixedPointIteration(x0, e, N):
+def fixedPointIteration(x0, e, N = MaxIterations):
     print('\n\n*** FIXED POINT ITERATION ***')
     step = 1
     flag = 1
     condition = True
     while condition:
         x1 = g(x0)
-        temp=x0
-        print('Iteration-%d, x1 = %0.6f and f(x1) = %0.6f' % (step, x1, f(x1)))
-        x0 = x1
 
-        step = step + 1
-        
-        if step > N:
+        accuracy = abs(x1-x0)
+        print(f'Iteration = {step:3}, x1 = {x1:3.15}   Accuracy = {accuracy:3.15}   f(x1) = {f(x1):3.15} ')
+                
+        if step > MaxIterations or step > N:
             flag=0
             break
-        
-        condition = abs(temp-x0) > e
 
+        condition = accuracy > e
+        
+        x0=x1
+        step = step + 1
+        
     if flag==1:
-        print('\nRequired root is: %0.8f' % x1)
+        print(f'\nRequired root is: {x1:3.15}')
     else:
         print('\nNot Convergent.')
 
-# Input Section
-# x0 = input('Enter Guess: ')
-# e = input('Tolerable Error: ')
-# N = input('Maximum Step: ')
 
 # Converting x0 and e to float
 x0 = 1
-e = 0.000001
-
-# Converting N to integer
-N = 15
-
+e = 0.01
 
 #Note: You can Take input from user using following commands
 # x0 = float(input('Enter Guess: '))
@@ -53,4 +48,4 @@ N = 15
 # N = int(input('Maximum Step: '))
 
 # Starting Newton Raphson Method
-fixedPointIteration(x0,e,N)
+fixedPointIteration(x0,e)

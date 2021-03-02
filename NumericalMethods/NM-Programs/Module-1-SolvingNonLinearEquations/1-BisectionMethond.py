@@ -5,7 +5,7 @@ MaxIterations = 1000
 print()
 print("Bisection Method")
 
-def BisectionMethod(f,a,b,TOL):
+def BisectionMethod(a,b,TOL):
     i=1
     while i<=MaxIterations:
         
@@ -43,4 +43,4 @@ a   = 1                 # First End Point
 b   = 2                  # Second End Point
 TOL = pow(10,-5)           # Accuracy Required
 
-BisectionMethod(f,a,b,TOL)
+BisectionMethod(a,b,TOL)
