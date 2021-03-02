@@ -1,6 +1,6 @@
+# Regula Falsi method is same as secant method but secant method does not insure bracketing where as Regula Falsi does
+
 from math import *
-
-
 
 # Implementing False Position Method
 def falsePosition(x0,x1,e,N):
