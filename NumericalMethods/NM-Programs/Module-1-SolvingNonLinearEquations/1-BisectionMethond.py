@@ -1,54 +1,46 @@
-from math import *
-from matplotlib import pyplot as plt
+import numpy as np
+import math
 
+MaxIterations = 1000
 print()
 print("Bisection Method")
+
+def BisectionMethod(f,a,b,TOL):
+    i=1
+    while i<=MaxIterations:
+        
+        # Finding Bisection
+        m=(a+b)/2
+        
+        # Finding Function Value at a b and m
+        fa=f(a)
+        fm=f(m)
+        fb=f(b)
+        accuracy = (b-a)/2
+        
+        if fm==0 or (accuracy<TOL):
+            print(f'\nFinal Root Found')
+            print(f'\niteration = {i:3} ---->  x = {m:10.10} -----> accuracy = {accuracy:4.10} -----> f(m) = {fm:10.10}\n\n')
+            break
+        
+        # Checking Interval for next iteration
+        if fa*fm>0:
+            a=m
+        else:
+            b=m
+            
+        print(f'iteration = {i:3}        x = {m:15.10}      accuracy = {accuracy:4.20}       f(m) = {fm:.10}')
+        i=i+1
+
 def f(x):
     
     # Input Function
-    exp= -(x**3)-cos(x)    
-    return exp
+    g= x**2 - 4*x + 4 - math.log(x)  
 
-a=-1                 # First End Point
-b=0                  # Second End Point
-ep=0.00001           # Accuracy Required
-temp = abs(b-a)
-i=1
-while temp>=ep:
-    # print()
-    plt.plot(temp,i)
-    # Printing Iteration Number
-    # print(f"Iteration : {i}")
-    i+=1
-    
-    # Finding Bisection
-    m=(a+b)/2
-    print("b=%0.8f"%b)                    # Setting Precision using Fstring
-    # print(f"m={m:0.8f}")                # Setting Precision using Fstring
-    
-    # Finding Function Value at a b and m
-    fa=f(a)
-    fm=f(m)
-    fb=f(b)
-    
-    
-    # print(f"f(a)*f(m)={fa*fm}")
-    # print(f"f(b)*f(m)={fb*fm}")
-    
-    # Checking Interval for next iteration
-    if fa*fm<0:
-        b=m
-        # print("a=%0.8f"%a+"  b=%0.8f"%b)             # setting precision using %
-    else:
-        a=m
-        # print("a={0:0.8f} b={0:0.8f}".format(a,b))     # Setting Precision using .format
-    # Checking Accuracy Reached
-    temp = abs(b-a)
-    # print(f"Accuracy Reached = {temp}")
+    return g
 
-print(f"""
-    Final Solution is 'x={m:0.8f}'
+a   = 1                 # First End Point
+b   = 2                  # Second End Point
+TOL = pow(10,-5)           # Accuracy Required
 
-        The End""")
-    
-plt.show()
+BisectionMethod(f,a,b,TOL)
