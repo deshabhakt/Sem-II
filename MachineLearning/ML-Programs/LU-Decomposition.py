@@ -24,10 +24,15 @@ for i in range(0,n-1):
 def printMatrix(V):
     for i in range(n):
         for j in range(n):
+            
+            print(f'{V[i][j]:15.08f}' ,  end="  ")
+            
+            '''
             if V[i][j]>=0 :
                 print(f'{V[i][j]:7.05f}' ,  end="  ")
             else:
                 print(f'{V[i][j]:7.04f}' ,  end="  ")
+            '''
         print()
     print()
 
