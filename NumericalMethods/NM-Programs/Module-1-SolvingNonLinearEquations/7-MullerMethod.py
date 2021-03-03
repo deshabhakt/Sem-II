@@ -1,4 +1,5 @@
-  
+import cmath
+
 MAX_ITERATIONS = 10000 
   
 def f(x): 
@@ -23,8 +24,12 @@ def Muller(x0, x1, x2, TOL):
         i += 1 
 
         b = d2 +h2*d
-        D = ((pow(b,2))-4*f2*d)**(1/2)
-
+        sq_root = ((pow(b,2))-4*f2*d)
+        D = 0
+        if sq_root == complex():
+            D = cmath.sqrt(sq_root)
+        else:
+            D = (sq_root)**(1/2)
         E=0
         if(abs(b-D)<abs(b+d)):
             E = b + D

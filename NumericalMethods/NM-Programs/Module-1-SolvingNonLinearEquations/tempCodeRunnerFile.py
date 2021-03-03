@@ -1,2 +1,3 @@
-def f(x):
-#     return (x**4)-3*(x**2)-3
+
+b=complex(0.5,0.9)
+c=complex(0.5,0.8)
