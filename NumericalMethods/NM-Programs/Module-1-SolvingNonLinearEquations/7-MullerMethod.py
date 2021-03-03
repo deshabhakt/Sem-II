@@ -1,13 +1,15 @@
+from math import *
 import cmath
 
 MAX_ITERATIONS = 10000 
   
-def f(x): 
-  
-    return (1 * pow(x, 3) - x + 2) 
-  
+ 
 def Muller(x0, x1, x2, TOL): 
-  
+    
+    x0 = float(x0)
+    x1 = float(x1)
+    x2 = float(x2)
+
     i = 0 
     h1 = x1 - x0  
     h2 = x2 - x1 
@@ -39,9 +41,11 @@ def Muller(x0, x1, x2, TOL):
         h = -2*f2/E
         p = x2 + h
         
-        print(f'count is {i} -----> x: {p}')
+        accuracy = abs(h)
+        
+        print(f'Iteration = {i:3}, x1 = {x1:3.15}   Accuracy = {accuracy:3.15}   f(x1) = {f(x1):3.15} ')
 
-        if(abs(h)<TOL):
+        if(accuracy<TOL):
             break
         
         else:
@@ -66,7 +70,12 @@ def Muller(x0, x1, x2, TOL):
     if (i <= MAX_ITERATIONS): 
         print("The value of the root is", 
                           p) 
+
+def f(x): 
   
+    return cos(x) - x*exp(x)
+
+
 # Driver Code 
 a = 0 
 b = 1 

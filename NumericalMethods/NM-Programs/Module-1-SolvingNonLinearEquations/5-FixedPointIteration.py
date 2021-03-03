@@ -1,15 +1,8 @@
 # Fixed Point Iteration Method
 # Importing math to use sqrt function
-from mpmath import *
+from math import *
 
 MaxIterations = 1000
-
-def f(x):
-    return ((x**4) - 3*(x**2) - 3)
-
-# Re-writing f(x)=0 to x = g(x)
-def g(x):
-    return (-3*pow(x,3) + pow(x,4))/3
 
 # Implementing Fixed Point Iteration Method
 def fixedPointIteration(x0, e, N = MaxIterations):
@@ -22,6 +15,8 @@ def fixedPointIteration(x0, e, N = MaxIterations):
 
         accuracy = abs(x1-x0)
         print(f'Iteration = {step:3}, x1 = {x1:3.15}   Accuracy = {accuracy:3.15}   f(x1) = {f(x1):3.15} ')
+        
+        # print(f'Iteration = {step:3}, x1 = {x1}   Accuracy = {accuracy}   f(x1) = {f(x1)} ')
                 
         if step > MaxIterations or step > N:
             flag=0
@@ -37,10 +32,16 @@ def fixedPointIteration(x0, e, N = MaxIterations):
     else:
         print('\nNot Convergent.')
 
+def f(x):
+    return cos(x) - x*exp(x)
+
+# Re-writing f(x)=0 to x = g(x)
+def g(x):
+    return (cos(x)/exp(x))
 
 # Converting x0 and e to float
-x0 = 1
-e = 0.01
+x0 = 0
+e = 0.001
 
 #Note: You can Take input from user using following commands
 # x0 = float(input('Enter Guess: '))

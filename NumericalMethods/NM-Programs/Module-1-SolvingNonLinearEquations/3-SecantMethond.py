@@ -2,7 +2,7 @@ from math import *
 
 # Defining Function
 def f(x):
-    return cos(x) - x
+    return cos(x) - x*exp(x)
 
 # Implementing Secant Method
 
@@ -16,8 +16,8 @@ def secant(x0,x1,e,N):
             break
         
         x2 = x0 - (x1-x0)*f(x0)/( f(x1) - f(x0) ) 
-        print('Iteration-%d, x2 = %0.6f and f(x2) = %0.6f' % (step, x2, f(x2)))
-        # print(f"{x0}")
+        print(f'Iteration-{step:3}, x2 = {x2:3.10} and f(x2) = {f(x2):3.10}')
+        
         x0 = x1
         x1 = x2
         step = step + 1
@@ -31,9 +31,9 @@ def secant(x0,x1,e,N):
 
 
 # Input Section
-x0 = 0.5
-x1 = pi*0.25
-e = 0.00001
+x0 = 0
+x1 = 1
+e = 0.001
 N = 20
 
 #Note: You can take input from user like this

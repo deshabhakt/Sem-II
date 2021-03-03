@@ -1,5 +1,5 @@
 import numpy as np
-import math
+from math import *
 
 MaxIterations = 1000
 print()
@@ -35,12 +35,11 @@ def BisectionMethod(a,b,TOL):
 def f(x):
     
     # Input Function
-    g= x**2 - 4*x + 4 - math.log(x)  
-
+    g = cos(x) -x*exp(x)
     return g
 
-a   = 1                 # First End Point
-b   = 2                  # Second End Point
-TOL = pow(10,-5)           # Accuracy Required
+a   = 0                 # First End Point
+b   = 1                  # Second End Point
+TOL = pow(10,-3)           # Accuracy Required
 
 BisectionMethod(a,b,TOL)

@@ -9,7 +9,7 @@ def falsePosition(x0,x1,e,N):
     condition = True
     while condition :
         x2 = x0 - (x1-x0) * f(x0)/( f(x1) - f(x0) )
-        print('Iteration-%d, x2 = %0.6f and f(x2) = %0.6f' % (step, x2, f(x2)))
+        print(f'Iteration-{step}, x2 = {x2:3.10} and f(x2) = {f(x2):3.10}')
         # print(f"{abs(x1-x0)}")
        
         if f(x0) * f(x2) < 0:
@@ -30,16 +30,16 @@ def falsePosition(x0,x1,e,N):
 
 # Defining Function
 def f(x):
-    return -(x**3)-cos(x)
+    return cos(x) - x*exp(x)
 
 # Input Section
 # x0 = float(input('First Guess: '))
 # x1 = float(input('Second Guess: '))
 # e = float(input('Tolerable Error: '))
 # N = int(input('Number of Steps: '))
-x0 = -1
-x1 = 0
-e  = 0.00001
+x0 = 0
+x1 = 1
+e  = 0.001
 N  = 20
 
 # Checking Correctness of initial guess values and false positioning
