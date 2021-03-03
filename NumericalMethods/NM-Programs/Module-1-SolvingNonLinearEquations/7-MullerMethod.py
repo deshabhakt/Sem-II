@@ -1,16 +1,10 @@
 from math import *
-import cmath
 
 MAX_ITERATIONS = 10000 
   
  
-def Muller(x0, x1, x2, TOL): 
-    
-    x0 = float(x0)
-    x1 = float(x1)
-    x2 = float(x2)
-
-    i = 0 
+def Muller(x0, x1, x2, TOL, N = MAX_ITERATIONS): 
+    print("\n\n*** MULLER METHOD IMPLEMENTATION ***")
     h1 = x1 - x0  
     h2 = x2 - x1 
     
@@ -21,68 +15,69 @@ def Muller(x0, x1, x2, TOL):
     d1 = (f1 - f0)/h1  
     d2 = (f2 - f1)/h2 
     d = (d2-d1)/(h1+h2) 
-    i=0
-    while (True): 
-        i += 1 
-
+    i = 3
+    
+    while i<=N: 
+        
         b = d2 +h2*d
-        sq_root = ((pow(b,2))-4*f2*d)
-        D = 0
-        if sq_root == complex():
-            D = cmath.sqrt(sq_root)
-        else:
-            D = (sq_root)**(1/2)
-        E=0
-        if(abs(b-D)<abs(b+d)):
-            E = b + D
+        
+        D = ((b**2)-4*f2*d)**(1/2)
+            
+        if(abs(b-D) < abs(b+D)):
+            E = b + D 
+            
         else:
             E = b - D
 
         h = -2*f2/E
         p = x2 + h
         
-        accuracy = abs(h)
-        
-        print(f'Iteration = {i:3}, x1 = {x1:3.15}   Accuracy = {accuracy:3.15}   f(x1) = {f(x1):3.15} ')
-
-        if(accuracy<TOL):
+        if(abs(h)<TOL):
+            print(f"\n\niteration = {i:3}      x = {p:3.05}        f(p) = {f(p):3.05}") 
             break
         
-        else:
-            x0=x1
-            x1=x2
-            x2=p
-            h1 = x1 - x0  
-            h2 = x2 - x1 
-    
-            f0 = f(x0) 
-            f1 = f(x1) 
-            f2 = f(x2) 
-            
-            d1 = (f1 - f0)/h1  
-            d2 = (f2 - f1)/h2 
-            d = (d2-d1)/(h1+h2) 
+        print(f'Iteration = {i:3}  p = {p:3.10}   f(p) = {f(p):3.10} ')
 
-        if (i > MAX_ITERATIONS): 
-            print("Root cannot be found using",  
-                            "Muller's method") 
-            break 
-    if (i <= MAX_ITERATIONS): 
-        print("The value of the root is", 
-                          p) 
+        x0=x1
+        x1=x2
+        x2=p
+        h1 = x1 - x0  
+        h2 = x2 - x1 
+
+        f0 = f(x0) 
+        f1 = f(x1) 
+        f2 = f(x2) 
+        
+        d1 = (f1 - f0)/h1  
+        d2 = (f2 - f1)/h2 
+        d = (d2-d1)/(h1+h2) 
+    
+        i += 1 
+    if (i > MAX_ITERATIONS): 
+        print("Root cannot be found using",  
+                        "Muller's method") 
+
+        
+
 
 def f(x): 
   
-    return cos(x) - x*exp(x)
+    g = (x**3) - x + 2
+    # g = 16*(x**4) - 40*(x**3) +5*(x**2) + 20*x +6
+    return g
 
 
 # Driver Code 
-a = 0 
-b = 1 
-c = 2 
-e = 0.000001
-# a=complex(-0.5,1)
-# b=complex(0.5,0.9)
-# c=complex(0.5,0.8)
-Muller(a, b, c, e)
+
+# x0 = 0.5
+# x1 = -0.5
+# x2 = -1.0
+
+x0 =complex(0.5,1)
+x1 =complex(0.5,0.9)
+x2 =complex(0.5,0.8)
+
+e = 10**(-5)
+
+Muller(x0, x1, x2, e)
       

@@ -6,11 +6,11 @@ MaxIterations = 1000
 
 # Implementing Fixed Point Iteration Method
 def fixedPointIteration(x0, e, N = MaxIterations):
-    print('\n\n*** FIXED POINT ITERATION ***')
+    print('\n\n*** FIXED POINT ITERATION METHOD ***')
+    x0 = float(x0)
     step = 1
-    flag = 1
-    condition = True
-    while condition:
+    
+    while step <= N:
         x1 = g(x0)
 
         accuracy = abs(x1-x0)
@@ -18,18 +18,14 @@ def fixedPointIteration(x0, e, N = MaxIterations):
         
         # print(f'Iteration = {step:3}, x1 = {x1}   Accuracy = {accuracy}   f(x1) = {f(x1)} ')
                 
-        if step > MaxIterations or step > N:
-            flag=0
+        if accuracy < e:
+            print(f'\nRequired root is: {x1:3.15}')
             break
 
-        condition = accuracy > e
-        
-        x0=x1
         step = step + 1
-        
-    if flag==1:
-        print(f'\nRequired root is: {x1:3.15}')
-    else:
+        x0=x1
+    
+    if(step > N):
         print('\nNot Convergent.')
 
 def f(x):

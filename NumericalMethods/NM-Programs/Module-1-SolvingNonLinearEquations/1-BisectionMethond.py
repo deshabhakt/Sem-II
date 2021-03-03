@@ -1,45 +1,62 @@
-import numpy as np
+
 from math import *
 
 MaxIterations = 1000
-print()
-print("Bisection Method")
 
-def BisectionMethod(a,b,TOL):
-    i=1
-    while i<=MaxIterations:
+print('\n\n*** BISECTION METHOD IMPLEMENTATION ***')
+
+def BisectionMethod(a, b, TOL, N = MaxIterations):
+    
+    a = float(a)
+    b = float(b)
+    i = 1
+    
+    while i<=N:
         
         # Finding Bisection
-        m=(a+b)/2
+        m = (a+b)/2
         
         # Finding Function Value at a b and m
-        fa=f(a)
-        fm=f(m)
-        fb=f(b)
-        accuracy = (b-a)/2
+        fa = f(a)
+        fm = f(m)
+        fb = f(b)
         
-        if fm==0 or (accuracy<TOL):
+        print(f'iteration = {i:3}  a = {a}   b = {b}   m = {m}    f(m) = {fm}')
+        
+        # print(f'Iteration-{i} m = {m:3} and f(x2) = {fm:3}')
+        
+        if abs(fm) <=TOL or (abs(m-a)) < TOL:
             print(f'\nFinal Root Found')
-            print(f'\niteration = {i:3} ---->  x = {m:10.10} -----> accuracy = {accuracy:4.10} -----> f(m) = {fm:10.10}\n\n')
+            
+            print(f'\niteration = {i:3}    a = {a:3.05}   b = {b:3.06}   m = {m:3.05}   f(m) = {fm:3.05}\n\n')
+           
+            # print(f'Iteration-{i}, m = {m:3.10} and f(x2) = {fm:3.10}')
+            
             break
+        i = i + 1
         
         # Checking Interval for next iteration
         if fa*fm>0:
-            a=m
+            a = m
         else:
-            b=m
-            
-        print(f'iteration = {i:3}        x = {m:15.10}      accuracy = {accuracy:4.20}       f(m) = {fm:.10}')
-        i=i+1
+            b = m
+    if i > N:
+        print("Not Convergent")        
+        
 
 def f(x):
     
     # Input Function
-    g = cos(x) -x*exp(x)
+    # g = (x**3) + 4*(x**2) - 10
+    g = cos(x) - x*exp(x)
+    g = x**3
     return g
 
-a   = 0                 # First End Point
-b   = 1                  # Second End Point
-TOL = pow(10,-3)           # Accuracy Required
+a   = -0.5                 # First End Point
+b   = 1.0               # Second End Point
+TOL = 0.0001             # Accuracy Required
+
+# N = 20
+
 
 BisectionMethod(a,b,TOL)
