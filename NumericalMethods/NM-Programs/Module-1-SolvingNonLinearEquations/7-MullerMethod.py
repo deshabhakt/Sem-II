@@ -1,5 +1,5 @@
 from math import *
-
+import cmath
 MAX_ITERATIONS = 10000 
   
  
@@ -62,20 +62,20 @@ def Muller(x0, x1, x2, TOL, N = MAX_ITERATIONS):
 
 def f(x): 
   
-    g = (x**3) - x + 2
+    g = (x**4) - 4*(x**2) - 3*x + 5
     # g = 16*(x**4) - 40*(x**3) +5*(x**2) + 20*x +6
     return g
 
 
 # Driver Code 
 
-# x0 = 0.5
-# x1 = -0.5
-# x2 = -1.0
+x0 = -1.5
+# x1 = 2.0
+# x2 = 2.1
 
-x0 =complex(0.5,1)
-x1 =complex(0.5,0.9)
-x2 =complex(0.5,0.8)
+# x0 =complex(-1.5,0)
+x1 =complex(-1.5,-1)
+x2 =complex(-1.5,-0.9)
 
 e = 10**(-5)
 

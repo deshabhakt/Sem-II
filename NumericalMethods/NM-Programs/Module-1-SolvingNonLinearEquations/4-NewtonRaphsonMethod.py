@@ -32,7 +32,7 @@ def newtonRaphson(x0,e,N=MaxIterations):
 # Defining Function
 def f(x):
     
-    y = cos(x) - x*exp(x)
+    y = 3*cos(x-1) - x
     
 
     return y
@@ -40,14 +40,14 @@ def f(x):
 # Defining derivative of function
 def g(x):
     
-    z = -sin(x) -x*exp(x) - exp(x)
+    z = -3*sin(x-1) -1
     return z
 
 
 # Input Section
 
-x0 = 0.5
-e  = 0.0001
+x0 = 1.5
+e  = 0.001
 
 # N  = 25
 
