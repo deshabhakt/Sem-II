@@ -20,7 +20,7 @@ def Muller(x0, x1, x2, TOL, N = MAX_ITERATIONS):
     while i<=N: 
         
         b = d2 +h2*d
-        
+        print(f'i = {i} b={b}')
         D = ((b**2)-4*f2*d)**(1/2)
             
         if(abs(b-D) < abs(b+D)):
@@ -69,12 +69,12 @@ def f(x):
 
 # Driver Code 
 
-x0 = -1.5
+# x0 = -1.5
 # x1 = 2.0
 # x2 = 2.1
 
-# x0 =complex(-1.5,0)
-x1 =complex(-1.5,-1)
+x0 =complex(-1.5,0.0)
+x1 =complex(-1.5,-1.0)
 x2 =complex(-1.5,-0.9)
 
 e = 10**(-5)

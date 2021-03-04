@@ -1,6 +1,6 @@
 from math import *
 
-MaxIterations = 1000
+MaxIterations = 10000000
 
 # Implementing Newton Raphson Method
 
@@ -46,8 +46,8 @@ def g(x):
 
 # Input Section
 
-x0 = 1.5
-e  = 0.001
+x0 = 0
+e  = 0.000000000000000001
 
 # N  = 25
 

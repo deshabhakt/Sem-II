@@ -23,7 +23,7 @@ def secant(x0,x1,e,N=MaxIterations):
             print(f'\nRequired root is: {x1:3.06}')
             break
 
-        print(f'Iteration-{step:3}, {x0}  {x1}  x2 = {x2} and f(x2) = {f(x2)}')
+        print(f'Iteration-{step:3}, a = {x0}            b ={x1}           x{step} = {x2}             and f(x2) = {f(x2)}')
         # print(f'Iteration = {step:3}, x1 = {x1}   Accuracy = {accuracy}   f(x1) = {f(x1)} ')
         
         x0 = x1
@@ -39,8 +39,8 @@ def f(x):
     return (x**3) - 10*(x**2) +5
 
 # Input Section
-x0 = 0
-x1 = 1
+x0 = 0.0
+x1 = 1.0
 e = 0.0001
 
 # N = 20
