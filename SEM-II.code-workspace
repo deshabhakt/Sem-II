@@ -8,6 +8,6 @@
 		}
 	],
 	"settings": {
-		"python.pythonPath": "C:\\Users\\Deshabhakt\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+		"python.pythonPath": "/bin/python"
 	}
 }
