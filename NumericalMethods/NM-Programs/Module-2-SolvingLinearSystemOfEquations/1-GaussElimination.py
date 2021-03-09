@@ -4,9 +4,7 @@ import sys
 
 # Defining Function for printing Matrix
 def printMatrix(V):
-    
-    x = np.zeros(n)
-    
+       
     for i in range(n):
         for j in range(n+1):
                      
@@ -21,15 +19,10 @@ def printMatrix(V):
         print()
     print()
 
-def partialPivoting(a,r,c):
-    mx = a[r][c]
-    for x in range(r,n):
-        if(mx < a[x,c]):
-            swap()
-        
 
 # Applying Gauss Elimination
 def GaussElimination(a,n):
+    x = np.zeros(n)
     for i in range(n):
         if a[i][i] == 0.0:
             sys.exit('Divide by zero detected!')
