@@ -19,7 +19,6 @@ def luDecomposition(A,b,n):
     U = copy.copy(A)
     itr = 0 
     for j in range(n-1):
-        for
         for i in range(j+1,n):
             
             if( U[j][j]==0):
