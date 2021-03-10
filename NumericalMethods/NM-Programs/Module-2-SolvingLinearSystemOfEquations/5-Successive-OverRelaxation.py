@@ -29,13 +29,16 @@ print(f'\nRelaxation Factor = {w}')
 print('\n(Count, x, y, z)\n')
 
 while condition:
+    
     x1 = (1-w) * x0 + w * f1(x0,y0,z0)
     y1 = (1-w) * y0 + w * f2(x1,y0,z0)
     z1 = (1-w) * z0 + w * f3(x1,y1,z0)
+
     print('(%d, %0.20f, %0.20f, %0.20f)\n' %(count, x1,y1,z1))
-    e1 = abs(x0-x1);
-    e2 = abs(y0-y1);
-    e3 = abs(z0-z1);
+    
+    e1 = abs(x0-x1)
+    e2 = abs(y0-y1)
+    e3 = abs(z0-z1)
     
     count += 1
     x0 = x1

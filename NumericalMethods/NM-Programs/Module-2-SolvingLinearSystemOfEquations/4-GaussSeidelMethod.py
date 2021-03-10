@@ -30,9 +30,9 @@ while condition:
     
     print('(%d, %0.20f, %0.20f, %0.20f)\n' %(count, x1,y1,z1))
 
-    e1 = abs(x0-x1);
-    e2 = abs(y0-y1);
-    e3 = abs(z0-z1);
+    e1 = abs(x0-x1)
+    e2 = abs(y0-y1)
+    e3 = abs(z0-z1)
     
     count += 1
     x0 = x1
