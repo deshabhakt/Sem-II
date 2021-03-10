@@ -49,16 +49,6 @@ def luDecomposition(A,b,n):
             print("U = ")
             printMatrix(U)
             
-    
-    # x = np.zeros(n)
-    # x[n-1] = b[n-1]/U[n-1][n-1]
-    # for i in range(n-2,-1,-1):
-    #     x[i] = b[i]
-        
-    #     for j in range(i+1,n):
-    #         x[i] = x[i] - U[i][j]*x[j]
-        
-    #     x[i] = x[i]/U[i][i]
 
 
 n = 3
