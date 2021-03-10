@@ -55,7 +55,7 @@ def luDecomposition(A,b,n):
             print('U = \n')
             printMatrix(U)
             
-            I2 = copy.copy(I)
+            I2 = copy.copy(J)
             
             # Swapping rows
             temp = copy.copy(U[row,:])
@@ -70,11 +70,11 @@ def luDecomposition(A,b,n):
             print('U = \n')
             printMatrix(U)
             
-            print("\nFirst Permutation Matrix is: ")
-            print(f"P{j+1}{column+1} = ")
+            print("\nPermutation Matrix (for Column Transformation) is: ")
+            print(f"C{j+1}{column+1} = ")
             printMatrix(I)
             
-            print("\nSecond Permutation Matrix is: ")
+            print("\nPermutation Matrix(for Row Transformation) is: ")
             print(f"P{j+1}{row+1} = ")
             printMatrix(I2)
             
@@ -98,7 +98,7 @@ def luDecomposition(A,b,n):
             print('U = \n')
             printMatrix(U)
             
-            print(f"P{j+1}{column+1} = ")
+            print(f"C{j+1}{column+1} = ")
             printMatrix(I)
         elif row!=-1 and column==j:
             I = copy.copy(J)
