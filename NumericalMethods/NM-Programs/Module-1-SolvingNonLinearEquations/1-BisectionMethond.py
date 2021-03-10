@@ -21,14 +21,18 @@ def BisectionMethod(a, b, TOL, N = MaxIterations):
         fm = f(m)
         fb = f(b)
         
-        print(f'iteration = {i:3}  a = {a}   b = {b}   m = {m}    f(m) = {fm}')
+        print(f'iteration = {i:3}',end ="    ")
+        print(f'a = {a:15.10f}',end="    ")
+        print(f'b = {b:15.10f}',end="    ")
+        print(f'm = {m:15.10f}',end="    ")
+        print(f"f(m) = {fm:15.10f}")
         
         # print(f'Iteration-{i} m = {m:3} and f(x2) = {fm:3}')
         
         if abs(fm) <=TOL or (abs(m-a)) < TOL:
             print(f'\nFinal Root Found')
             
-            print(f'\niteration = {i:3}    a = {a:3.05}   b = {b:3.06}   m = {m:3.05}   f(m) = {fm:3.05}\n\n')
+            print(f'\niteration = {i:3}    a = {a:3.05f}   b = {b:3.06f}   m = {m:3.05f}   f(m) = {fm:3.05f}\n\n')
            
             # print(f'Iteration-{i}, m = {m:3.10} and f(x2) = {fm:3.10}')
             
