@@ -20,6 +20,8 @@ def luDecomposition(A,b,n):
    
     U = copy.copy(A)
     
+    J = np.identity(n)
+    
     itr = 0 
     for j in range(n-1):
         mx = U[j][j]
@@ -30,18 +32,27 @@ def luDecomposition(A,b,n):
                 mx = U[m][j]
                 row = m
         if(row!=-1):
+            I = copy.copy(J)
+            
             print('U = \n')
             printMatrix(U)
-            print("\nPerforming Partial Pivoting by\n")
+            print("\nPerforming Complete Pivoting by\n")
             
-            # Swapping Rows
+            # Swapping rows
             temp = copy.copy(U[row,:])
             U[row,:] = copy.copy(U[j,:])
             U[j,:] = copy.copy(temp)
             
-            print(f"Swapping row {j+1} with row {m+1}\n")
+            temp = copy.copy(I[row,:])
+            I[row,:] = copy.copy(I[j,:])
+            I[j,:] = copy.copy(temp)
+
+            print(f"Swapping row {j+1} with row {row+1}\n")
             print('U = \n')
             printMatrix(U)
+            
+            print(f"P{j+1}{row+1} = ")
+            printMatrix(I)
             
         for i in range(j+1,n):               
             itr+=1

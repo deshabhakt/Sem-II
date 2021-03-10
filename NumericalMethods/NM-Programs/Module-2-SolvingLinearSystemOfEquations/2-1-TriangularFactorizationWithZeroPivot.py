@@ -17,28 +17,38 @@ def luDecomposition(A,b,n):
     for i in range(n):
         L[i][i] = 1.0
     U = copy.copy(A)
+    
+    J = np.identity(n)
+
     itr = 0 
     for j in range(n-1):
         for i in range(j+1,n):
             
             if( U[j][j]==0):
-                print('A = \n')
-                printMatrix(A)
+                I = copy.copy(J)
+                print('U = \n')
+                printMatrix(U)
                 print("\nZero Pivot Detected Gauss Elimination Failed\n\n")
                 row = 0
                 for m in range(n-1,j-1,-1):
                     if U[m][j]!=0:
                         row = m
                         break
-                temp = copy.copy(A[row,:])
-                A[row,:] = copy.copy(A[j,:])
-                A[j,:] = copy.copy(temp)
                 temp = copy.copy(U[row,:])
                 U[row,:] = copy.copy(U[j,:])
                 U[j,:] = copy.copy(temp)
-                print(f"Swapping {j+1}th row with {m+1}th row\n")
-                print('A = \n')
-                printMatrix(A)
+
+                temp = copy.copy(I[row,:])
+                I[row,:] = copy.copy(I[j,:])
+                I[j,:] = copy.copy(temp)
+
+                print(f"Swapping {j+1}th row with {row+1}th row\n")
+                print('U = \n')
+                printMatrix(U)
+
+                print(f"P{j+1}{row+1} = ")
+                printMatrix(I)
+                
             itr+=1
             print(f'Iteration = {itr}\n')
             L[i][j] = U[i][j]/U[j][j]
