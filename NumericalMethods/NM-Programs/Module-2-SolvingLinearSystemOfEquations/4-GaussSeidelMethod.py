@@ -3,14 +3,14 @@
 
 # Defining equations to be solved
 # in diagonally dominant form
-f1 = lambda x,y,z: (9-2*z+y)/9
-f2 = lambda x,y,z: (15-x+2*z)/10
-f3 = lambda x,y,z: (17-2*y +2*x)/13
+f1 = lambda x,y,z: (24-3*y)/4
+f2 = lambda x,y,z: (30+z-3*x)/4
+f3 = lambda x,y,z: (-24+y)/4
 
 # Initial setup
-x0 = 1
-y0 = 1
-z0 = 1
+x0 = 0
+y0 = 0
+z0 = 0
 
 # Reading tolerable error
 # e = float(input('Enter tolerable error: '))

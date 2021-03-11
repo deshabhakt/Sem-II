@@ -20,12 +20,10 @@ def Muller(x0, x1, x2, TOL, N = MAX_ITERATIONS):
     while i<=N: 
         
         b = d2 +h2*d
-        print(f'i = {i} b={b}')
         D = ((b**2)-4*f2*d)**(1/2)
             
         if(abs(b-D) < abs(b+D)):
             E = b + D 
-            
         else:
             E = b - D
 
@@ -33,14 +31,14 @@ def Muller(x0, x1, x2, TOL, N = MAX_ITERATIONS):
         p = x2 + h
         
         if(abs(h)<TOL):
-            print(f"\n\niteration = {i:3}      x = {p:3.05}        f(p) = {f(p):3.05}") 
+            print(f"\n\niteration = {i:3}      x = {p:f}        f(p) = {f(p):f}") 
             break
         
-        print(f'Iteration = {i:3}  p = {p:3.10}   f(p) = {f(p):3.10} ')
-
-        x0=x1
-        x1=x2
-        x2=p
+        print(f'a = {d:f}                b = {b:f}              c = {f(x2):f}\n')
+        print(f'\nIteration = {i:3}      p = {p:3.10f}          f(p) = {f(p):3.10f} ')
+        x0 = x1
+        x1 = x2
+        x2 = p
         h1 = x1 - x0  
         h2 = x2 - x1 
 
@@ -63,7 +61,7 @@ def Muller(x0, x1, x2, TOL, N = MAX_ITERATIONS):
 def f(x): 
   
     g = (x**4) - 4*(x**2) - 3*x + 5
-    # g = 16*(x**4) - 40*(x**3) +5*(x**2) + 20*x +6
+    # g = 16*(x**4) - 40*(x**3) +5*(x**2) + 20*x + 6
     return g
 
 

@@ -33,7 +33,8 @@ def GaussElimination(a,n):
             for k in range(n+1):
                 a[j][k] = a[j][k] - ratio * a[i][k]
             printMatrix(a)
-
+    
+    
     # Back Substitution
     x[n-1] = a[n-1][n]/a[n-1][n-1]
 
@@ -50,26 +51,27 @@ def GaussElimination(a,n):
     for i in range(n):
         print('X%d = %0.2f' %(i+1,x[i]), end = '\t')
 
-# Reading number of unknowns
-n = int(input('Enter number of unknowns: '))
-# n=2
+
 
 # Making augumented matrix
-a = np.zeros((n,n+1))
 # a = np.array([
 #     [1, 4, -1, 1, 2],
 #     [1, -2,-3,1,4],
 #     [4,-1,2,-1,2],
 #     [0,1,0,-4,0]])
 
+n = 3
 # a=np.array([[1,-1,1,6],[0,1,-2,4],[1,0,-1,2]])
 # a = np.array([[1,pow(10,-20),1],[1,1,2]])
-a = np.array([[3,-2,1,3],[1,-6,8,2],[2,3,-6,1]])
+
+a = np.array([[3.0,-2.,1.,3.],[1.,-6.,8.,2.],[2.,3.,-6.,1.]])
 
 GaussElimination(a,n)
 
 
 # Taking augmented matrix coefficients from user
+# n = int(input('Enter number of unknowns: '))
+# a = np.zeros((n,n+1))
 
 '''
 print('Enter Augmented Matrix Coefficients:')

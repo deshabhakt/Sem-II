@@ -67,6 +67,3 @@ printMatrix(L)
 
 print("U = ")
 printMatrix(U)
-
-IL = np.linalg.inv(L)
-print(IL)

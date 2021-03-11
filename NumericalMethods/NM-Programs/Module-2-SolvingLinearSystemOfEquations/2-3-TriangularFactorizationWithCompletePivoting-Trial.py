@@ -13,6 +13,7 @@ def printMatrix(V):
 
  
 def luDecomposition(A,b,n):
+    
     J = np.identity(n)
 
     L = np.zeros((n,n))
@@ -36,7 +37,7 @@ def luDecomposition(A,b,n):
         
         if(row!=-1 and column!=-1 and row!=j and column!=j):
             
-            print('U = \n')
+            print('U = ')
             printMatrix(U)
             print("\nPerforming Complete Pivoting by\n")
             
@@ -52,7 +53,7 @@ def luDecomposition(A,b,n):
             I[:,j] = copy.copy(temp)
 
             print(f"Swapping column {j+1} with column {column+1}\n")
-            print('U = \n')
+            print('U = ')
             printMatrix(U)
             
             I2 = copy.copy(J)
@@ -67,7 +68,7 @@ def luDecomposition(A,b,n):
             I2[j,:] = copy.copy(temp)
             
             print(f"Swapping row {j+1} with row {row+1}\n")
-            print('U = \n')
+            print('U = ')
             printMatrix(U)
             
             print("\nPermutation Matrix (for Column Transformation) is: ")
@@ -81,7 +82,7 @@ def luDecomposition(A,b,n):
         elif row==j and column!=-1:
             I = copy.copy(J)
             
-            print('U = \n')
+            print('U =')
             printMatrix(U)
             print("\nPerforming Complete Pivoting by\n")
             
@@ -95,7 +96,7 @@ def luDecomposition(A,b,n):
             I[:,j] = copy.copy(temp)
 
             print(f"Swapping column {j+1} with column {column+1}\n")
-            print('U = \n')
+            print('U =')
             printMatrix(U)
             
             print(f"C{j+1}{column+1} = ")
@@ -103,7 +104,7 @@ def luDecomposition(A,b,n):
         elif row!=-1 and column==j:
             I = copy.copy(J)
             
-            print('U = \n')
+            print('U =')
             printMatrix(U)
             print("\nPerforming Complete Pivoting by\n")
             
@@ -117,15 +118,15 @@ def luDecomposition(A,b,n):
             I[j,:] = copy.copy(temp)
 
             print(f"Swapping row {j+1} with row {row+1}\n")
-            print('U = \n')
+            print('U = ')
             printMatrix(U)
             
             print(f"P{j+1}{row+1} = ")
             printMatrix(I)
         
-        else:           # When Pivot is zero
+        else:                                       # When Pivot is zero
             I = copy.copy(J)
-            print('U = \n')
+            print('U = ')
             printMatrix(U)
             print("\nZero Pivot Detected Gauss Elimination Failed\n\n")
             row = 0
@@ -142,7 +143,7 @@ def luDecomposition(A,b,n):
             I[j,:] = copy.copy(temp)
 
             print(f"Swapping {j+1}th row with {row+1}th row\n")
-            print('U = \n')
+            print('U = ')
             printMatrix(U)
 
             print(f"P{j+1}{row+1} = ")
@@ -161,7 +162,8 @@ def luDecomposition(A,b,n):
 
             print("U = ")
             printMatrix(U)
-    return L,U
+
+            print('='*70)
 
 # n = 4
 # A = np.array(((
@@ -193,13 +195,20 @@ def luDecomposition(A,b,n):
 #     (1.,2.,1.)   
 # )))
 
+# n = 3
+# A = np.array(((
+#     (1.,2.,-1.),
+#     (2.,4.,0.),
+#     (0.,1.,-1.)   
+# )))
+
+n=3
 n = 3
 A = np.array(((
-    (1.,2.,-1.),
-    (2.,4.,0.),
-    (0.,1.,-1.)   
+    (-2.,2.,-1.),
+    (6.,-6.,7.),
+    (3.,-8.,4.)
 )))
-
 
 b = np.array([8.,7.,14.,-7.])
 luDecomposition(A,b,n)
