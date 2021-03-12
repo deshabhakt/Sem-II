@@ -13,7 +13,9 @@ def printMatrix(V):
 
  
 def luDecomposition(A,n):
-      
+
+    P =[]           # To Store Permutation Matrices
+
     U = copy.copy(A)
     
     tmpL = np.identity(n)
@@ -43,6 +45,7 @@ def luDecomposition(A,n):
             I[row,:] = copy.copy(I[j,:])
             I[j,:] = copy.copy(temp)
             
+            P.append(I)
             tmpL = np.matmul(I,tmpL)
             
             print(f"Swapping row {j+1} with row {row+1}\n")
@@ -72,6 +75,7 @@ def luDecomposition(A,n):
                 I[row,:] = copy.copy(I[j,:])
                 I[j,:] = copy.copy(temp)
 
+                P.append(I)
                 tmpL = np.matmul(I,tmpL)
 
                 print(f"Swapping {j+1}th row with {row+1}th row\n")
@@ -101,24 +105,9 @@ def luDecomposition(A,n):
 
     ActualL = np.linalg.inv(tmpL)
 
-    # Rearraging L
-    i=1
-    while i<n:
-        flag = False
-        if(ActualL[0][i]==1):
-            temp = copy.copy(ActualL[i,:])
-            ActualL[i,:] = copy.copy(ActualL[0,:])
-            ActualL[0,:] = copy.copy(temp)
-        for j in range(n):
-            if(ActualL[j][j]!=1 and i == n-1):
-                flag = True
-                break
-        if flag==True:
-            i=1
-        else:
-            i+=1
-
-    print("\nThe LU decomposition with Partial Pivoting is")
+    for i in range(len(P)):
+        ActualL = copy.copy(np.matmul(P[i],ActualL))
+    
     print("L = ")
     printMatrix(ActualL)
 
@@ -131,22 +120,25 @@ def luDecomposition(A,n):
     print("Original Input Matrix = ")
     printMatrix(A)
 
-n = 4
-A = np.array(((
-    (0.,0.,-1.,1.),
-    (1.,1.,-1.,2.),
-    (-1.,-1.,2.,0.),
-    (-1.,2.,0.,2.)
-)))
+    
+
+
+# n = 4
+# A = np.array(((
+#     (0.,0.,-1.,1.),
+#     (1.,1.,-1.,2.),
+#     (-1.,-1.,2.,0.),
+#     (-1.,2.,0.,2.)
+# )))
 
 # A = np.array(((
 #     (1.,1.,0.,3.0),
 #     (2.,1.,-1.,1.0),
 #     (3.,-1.,-1.,2.),
-#     (-1.,2.,3.,-1)
+#     (-1.,2.,3.,-1.)
 # )))
 
-# n = 3
+n = 3
 # A = np.array(((
 #     (-2.,2.,-1.),
 #     (6.,-6.,7.),
@@ -159,11 +151,11 @@ A = np.array(((
 #     (7.,8.,9.)
 # )))
 
-# A = np.array(((
-#     (3.,4.,7.),
-#     (6.,8.,3.),
-#     (1.,2.,1.)   
-# )))
+A = np.array(((
+    (3.,4.,7.),
+    (6.,8.,3.),
+    (1.,2.,1.)   
+)))
 
 
 luDecomposition(A,n)

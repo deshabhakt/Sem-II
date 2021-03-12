@@ -23,6 +23,7 @@ w = 0.5
 
 
 # Implementation of successive over-relaxation
+
 condition = True
 count = 1
 print(f'\nRelaxation Factor = {w}')
@@ -31,6 +32,8 @@ print('\n(Count, x, y, z)\n')
 while condition:
     
     x1 = (1-w) * x0 + w * f1(x0,y0,z0)
+
+    print(x1)
     y1 = (1-w) * y0 + w * f2(x1,y0,z0)
     z1 = (1-w) * z0 + w * f3(x1,y1,z0)
 

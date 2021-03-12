@@ -51,7 +51,7 @@ def GaussElimination(a,n):
     for i in range(n):
         print('X%d = %0.2f' %(i+1,x[i]), end = '\t')
 
-
+    
 
 # Making augumented matrix
 # a = np.array([
