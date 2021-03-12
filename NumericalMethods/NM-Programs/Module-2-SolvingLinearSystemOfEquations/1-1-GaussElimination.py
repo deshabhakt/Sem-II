@@ -8,13 +8,7 @@ def printMatrix(V):
     for i in range(n):
         for j in range(n+1):
                      
-            # '''
-            if j<n:
-                print(f'{V[i][j]:15.08f}' ,  end="  ")
-            
-            else:
-                print(f'| {V[i][j]:15.08f}' ,  end="  ")
-            # '''
+            print(f'{V[i][j]:15.08f}' ,  end="  ")
             
         print()
     print()
