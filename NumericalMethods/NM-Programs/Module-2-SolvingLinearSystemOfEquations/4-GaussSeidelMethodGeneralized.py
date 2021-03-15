@@ -52,7 +52,7 @@ def GaussSiedelMethod(A,X,b,n):
 
 # Initial setup
 
-n=3
+n = 3
 
 # Coefficient Matrix
 A = np.array([
@@ -67,13 +67,13 @@ b = np.array([
     [-24.]
     ])
 
-A = np.array([[3.0,-2.,1.],[1.,-6.,8.],[2.,3.,-6.]])
+# A = np.array([[3.0,-2.,1.],[1.,-6.,8.],[2.,3.,-6.]])
 
-b = np.array([
-    [3.],
-    [2.],
-    [1.]
-])
+# b = np.array([
+#     [3.],
+#     [2.],
+#     [1.]
+# ])
 # initial Guesses
 X = np.array([0.,0.,0.])
 

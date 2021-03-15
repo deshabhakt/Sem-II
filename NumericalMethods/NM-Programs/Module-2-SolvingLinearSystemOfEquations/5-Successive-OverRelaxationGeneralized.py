@@ -94,46 +94,6 @@ e = 0.0001
 
 # Reading relaxation factor
 # w = float(input("Enter relaxation factor: "))
-w = 0.5
+w = 1.25
 
 SOR(A,X,b,n,w)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# condition = True
-# count = 1
-# print(f'\nRelaxation Factor = {w}')
-# print('\n(Count, x, y, z)\n')
-
-# while condition:
-    
-#     x1 = (1-w) * x0 + w * f1(x0,y0,z0)
-#     y1 = (1-w) * y0 + w * f2(x1,y0,z0)
-#     z1 = (1-w) * z0 + w * f3(x1,y1,z0)
-
-#     print('(%d, %0.20f, %0.20f, %0.20f)\n' %(count, x1,y1,z1))
-    
-#     e1 = abs(x0-x1)
-#     e2 = abs(y0-y1)
-#     e3 = abs(z0-z1)
-    
-#     count += 1
-#     x0 = x1
-#     y0 = y1
-#     z0 = z1
-    
-#     condition = e1>e and e2>e and e3>e
-
-# print('\nSolution: x = %0.3f, y = %0.3f and z = %0.3f\n'% (x1,y1,z1))
