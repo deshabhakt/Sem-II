@@ -45,7 +45,7 @@ def GaussSiedelMethod(A,X,b,n):
             if accuracyReached[i]>e:
                 condition = True
 
-    print('\nSolution:')
+    print(f'\nSolution: Iteration = {count}')
     for i in range(n):
         print(f'x{i+1} = {X[i]}', end = "\t")
     print()
@@ -74,6 +74,14 @@ b = np.array([
 #     [2.],
 #     [1.]
 # ])
+
+A = np.array([[-10.,-8.,0.],
+            [-8.,10.,-1.,],
+            [0.,-1.,10.]
+            ])
+
+# b = np.array([-6.,9.,28.])
+
 # initial Guesses
 X = np.array([0.,0.,0.])
 

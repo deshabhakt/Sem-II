@@ -46,7 +46,7 @@ def SOR(A,X,b,n,w):
             if accuracyReached[i]>e:
                 condition = True
 
-    print('\nSolution:')
+    print(f'\nSolution: Iteration = {count}')
     for i in range(n):
         print(f'x{i+1} = {X[i]}', end = "\t")
     print()
@@ -55,17 +55,17 @@ def SOR(A,X,b,n,w):
 n=3
 
 # Coefficient Matrix
-A = np.array([
-    [4.,3.,0.],
-    [3.,4.,-1.],
-    [0.,-1.,4.]
-    ])
+# A = np.array([
+#     [4.,3.,0.],
+#     [3.,4.,-1.],
+#     [0.,-1.,4.]
+#     ])
 
-b = np.array([
-    [24.],
-    [30.],
-    [-24.]
-    ])
+# b = np.array([
+#     [24.],
+#     [30.],
+#     [-24.]
+#     ])
 
 # A = np.array([[3.0,-2.,1.],[1.,-6.,8.],[2.,3.,-6.]])
 
@@ -85,6 +85,17 @@ b = np.array([
 #     [-7.]
 # ])
 
+A = np.array([[-10.,-8.,0.],
+            [-8.,10.,-1.,],
+            [0.,-1.,10.]
+            ])
+
+b = np.array([
+    [-6.],
+    [9.],
+    [28.]
+    ])
+
 # initial Guesses
 X = np.array([0.,0.,0.])
 
@@ -94,6 +105,7 @@ e = 0.0001
 
 # Reading relaxation factor
 # w = float(input("Enter relaxation factor: "))
-w = 1.25
+w = 9/10
+
 
 SOR(A,X,b,n,w)

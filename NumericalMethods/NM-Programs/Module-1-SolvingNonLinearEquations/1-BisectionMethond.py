@@ -7,8 +7,6 @@ print('\n\n*** BISECTION METHOD IMPLEMENTATION ***')
 
 def BisectionMethod(a, b, TOL, N = MaxIterations):
     
-    a = float(a)
-    b = float(b)
     i = 1
     
     while i<=N:
