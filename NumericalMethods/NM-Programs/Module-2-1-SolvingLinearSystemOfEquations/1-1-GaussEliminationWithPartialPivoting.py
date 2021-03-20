@@ -44,33 +44,7 @@ def GaussElimination(a,n):
             print(f"Swapping {i+1}th row with {row+1}th row\n")
             printMatrix(a)
         
-        '''
-        if(a[i][i]==0):
-            I = np.identity(n)
-            print('A = ')
-            printMatrix(a)
-            print("\nZero Pivot Detected\n\n")
-            row = 0
-            for m in range(n-1,i-1,-1):
-                if a[m][i]!=0:
-                    row = m
-                    break
-            temp = copy.copy(a[row,:])
-            a[row,:] = copy.copy(a[i,:])
-            a[i,:] = copy.copy(temp)
 
-            temp = copy.copy(I[row,:])
-            I[row,:] = copy.copy(I[i,:])
-            I[i,:] = copy.copy(temp)
-            
-            print(f"Swapping {i+1}th row with {row+1}th row\n")
-            print('A = ')
-            printMatrix(a)
-
-            print(f"P{j+1}{row+1} = ")
-            printMatrix(I)
-        '''
-        
         for j in range(i+1, n):
             ratio = a[j][i]/a[i][i]
             print(f'R{j+1}{i+1} = {ratio}')
@@ -89,6 +63,7 @@ def GaussElimination(a,n):
             x[i] = x[i] - a[i][j]*x[j]
         
         x[i] = x[i]/a[i][i]
+
 
     # Displaying solution
     print('\nRequired solution is: ')
