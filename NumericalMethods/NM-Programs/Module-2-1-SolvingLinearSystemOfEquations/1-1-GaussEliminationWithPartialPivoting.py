@@ -24,7 +24,7 @@ def GaussElimination(a,n):
         mx = a[i][i]
         row = -1
         for k in range(i,n):
-            if(mx<a[k][i]):
+            if(mx<abs(a[k][i])):
                 mx=a[k][i]
                 row = k
         if(row!=-1):
@@ -43,6 +43,8 @@ def GaussElimination(a,n):
             
             print(f"Swapping {i+1}th row with {row+1}th row\n")
             printMatrix(a)
+        
+        '''
         if(a[i][i]==0):
             I = np.identity(n)
             print('A = ')
@@ -67,6 +69,8 @@ def GaussElimination(a,n):
 
             print(f"P{j+1}{row+1} = ")
             printMatrix(I)
+        '''
+        
         for j in range(i+1, n):
             ratio = a[j][i]/a[i][i]
             print(f'R{j+1}{i+1} = {ratio}')

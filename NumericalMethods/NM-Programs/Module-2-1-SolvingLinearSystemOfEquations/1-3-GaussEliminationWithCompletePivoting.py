@@ -34,7 +34,7 @@ def GaussElimination(a,n):
         
         for k in range(i,n):
             for l in range(i,n):
-                if(mx<a[k][l]):
+                if(mx<abs(a[k][l])):
                     mx=a[k][l]
                     row = k
                     column = l
@@ -144,6 +144,7 @@ def GaussElimination(a,n):
             print('A = ')
             printMatrix(a)
         
+        '''
         # if pivot element is zero
         elif a[i][i]==mx==0:
             I = np.identity(n)
@@ -170,7 +171,7 @@ def GaussElimination(a,n):
 
             print('A = ')
             printMatrix(a)
-
+        '''
         for j in range(i+1, n):
             ratio = a[j][i]/a[i][i]
             print(f'M{j+1}{i+1} = {ratio}')

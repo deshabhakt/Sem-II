@@ -29,7 +29,7 @@ def luDecomposition(A, n):
         row = -1
         # Partial Pivoting
         for m in range(j+1, n):
-            if(U[m][j] > mx):
+            if(abs(U[m][j]) > mx):
                 mx = U[m][j]
                 row = m
         if(row != -1):
@@ -58,6 +58,7 @@ def luDecomposition(A, n):
             print(f"P{j+1}{row+1} = ")
             printMatrix(I)
 
+        '''
         if(U[j][j] == 0):
             I = np.identity(n)
             print('U = \n')
@@ -85,6 +86,7 @@ def luDecomposition(A, n):
 
             print(f"P{j+1}{row+1} = ")
             printMatrix(I)
+        '''
 
         for i in range(j+1, n):
             itr += 1
@@ -105,8 +107,19 @@ def luDecomposition(A, n):
 
     ActualL = np.linalg.inv(tmpL)
 
+    p = np.identity(n)          # Variable to hold Final Permutation Matrix
+
     for i in range(len(P)):
         ActualL = copy.copy(np.matmul(P[i], ActualL))
+        p = np.matmul(P[i],p)
+    
+    
+    k = np.identity(n)      # Variable to hold transpose of final permutation matrix
+    for i in P:
+        k = np.matmul(i.transpose(),k)
+    
+    print("P = ")
+    printMatrix(p)
 
     print("L = ")
     printMatrix(ActualL)
@@ -120,6 +133,8 @@ def luDecomposition(A, n):
     print("Original Input Matrix = ")
     printMatrix(A)
 
+    print("(inv(P))*L*U = ")
+    printMatrix(np.matmul(k,np.matmul(ActualL,U)))
 
 n = 4
 A = np.array([
@@ -128,6 +143,13 @@ A = np.array([
     [-1., 2., 4., 7.],
     [-3., -6., 26., 2.]
 ])
+
+# A = np.array([
+#     [2.,1.,1.,0.],
+#     [4.,3.,3.,1.],
+#     [8.,7.,9.,5.],
+#     [6.,7.,9.,8.]
+# ])
 
 # A = np.array(((
 #     (0.,0.,-1.,1.),
