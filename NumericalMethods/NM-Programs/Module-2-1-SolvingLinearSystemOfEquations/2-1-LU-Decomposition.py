@@ -47,7 +47,7 @@ A = np.array([
     [-3., -6., 26., 2.]
 ])
 
-n = 3
+# n = 3
 # A = np.array(((
 #     (1.,2.,3.),
 #     (4.,5.,6.),
@@ -57,6 +57,8 @@ n = 3
 b = np.array([8.,7.,14.,-7.])
 L,U = luDecomposition(A,b,n)
 
+
+print("\nFinal L and U matrices are ")
 print("L = ")
 printMatrix(L)
 
