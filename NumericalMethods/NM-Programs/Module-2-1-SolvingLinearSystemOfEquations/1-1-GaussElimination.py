@@ -7,9 +7,7 @@ def printMatrix(V):
        
     for i in range(n):
         for j in range(n+1):
-                     
-            print(f'{V[i][j]:15.08f}' ,  end="  ")
-            
+            print(f'{V[i][j]:15.06f}' ,  end="  ")
         print()
     print()
 
@@ -43,16 +41,20 @@ def GaussElimination(a,n):
     # Displaying solution
     print('\nRequired solution is: ')
     for i in range(n):
-        print('X%d = %0.2f' %(i+1,x[i]), end = '\t')
+        print('X%d = %0.6f' %(i+1,x[i]), end = '\t')
 
     
 
 # Making augumented matrix
+
+# n = 4
 # a = np.array([
 #     [1, 4, -1, 1, 2],
-#     [1, -2,-3,1,4],
-#     [4,-1,2,-1,2],
-#     [0,1,0,-4,0]])
+#     [1, -2, -3, 1, 4],
+#     [4, -1, 2, -1, 2],
+#     [0, 1, 0, -4, 0]
+# ])
+
 
 n = 3
 # a=np.array([[1,-1,1,6],[0,1,-2,4],[1,0,-1,2]])

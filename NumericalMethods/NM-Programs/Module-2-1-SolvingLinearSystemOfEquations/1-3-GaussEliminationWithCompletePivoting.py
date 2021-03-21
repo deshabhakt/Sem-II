@@ -11,7 +11,7 @@ def printMatrix(V):
     for i in range(m):
         for j in range(n):
                      
-            print(f'{V[i][j]:15.10f}' ,  end="  ")
+            print(f'{V[i][j]:15.06f}' ,  end="  ")
             
         print()
     print()
@@ -196,15 +196,7 @@ a = np.array([
 # n = 3
 # a = np.array([[3.0,-2.,1.,3.],[1.,-6.,8.,2.],[2.,3.,-6.,1.]])
 
-# n = 3
-# a = np.array([
-#     [4.,3.,0.,24.],
-#     [3.,4.,-1.,30.],
-#     [0.,-1.,4.,-24.]
-#     ])
-
 GaussElimination(a,n)
-
 
 # Taking augmented matrix coefficients from user
 # n = int(input('Enter number of unknowns: '))
