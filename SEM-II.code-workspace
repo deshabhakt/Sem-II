@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "MachineLearning/ML-Programs"
+		},
+		{
+			"path": "../CompetitiveProgramming/gfg"
 		}
 	],
 	"settings": {
