@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="477px" height="243px" viewBox="0 0 477 243" enable-background="new 0 0 477 243" xml:space="preserve">
+<line fill="none" stroke="#BC1E47" stroke-miterlimit="10" x1="324" y1="108" x2="396" y2="108"/>
+<polyline fill="none" stroke="#BC1E47" stroke-miterlimit="10" points="288,162 324,108 324,18 "/>
+<polyline fill="none" stroke="#BC1E47" stroke-miterlimit="10" points="432,162 396,108 396,18 "/>
+<polyline fill="none" stroke="#BC1E47" stroke-miterlimit="10" points="261,90 360,81 459,90 "/>
+<polygon fill="none" stroke="#BC1E47" stroke-miterlimit="10" points="261,90 396,18 432,162 288,162 324,18 459,90 360,180 "/>
+<polyline fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" points="18,90 81,108 117,81 153,108 216,90 "/>
+<polygon fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" points="18,90 45,162 117,180 189,162 216,90
+	153,18 81,18 "/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="18" cy="90" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="81" cy="108" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="117" cy="81" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="153" cy="108" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="216" cy="90" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="81" cy="18" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="153" cy="18" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="189" cy="162" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="117" cy="180" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="45" cy="162" r="6"/>
+<polyline fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" points="261,90 324,108 360,81 396,108 459,90
+	"/>
+<polygon fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" points="261,90 288,162 360,180 432,162 459,90
+	396,18 324,18 "/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="261" cy="90" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="324" cy="108" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="360" cy="81" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="396" cy="108" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="459" cy="90" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="324" cy="18" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="396" cy="18" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="432" cy="162" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="360" cy="180" r="6"/>
+<circle fill="#0081CD" stroke="#000000" stroke-miterlimit="10" cx="288" cy="162" r="6"/>
+<text transform="matrix(1 0 0 1 104.001 234)" font-family="Liberation Serif" font-style="italic" font-size="36">G</text>
+<text transform="matrix(1 0 0 1 339.1011 234)"><tspan x="0" y="0" font-family="Liberation Serif" font-style="italic" font-size="36" letter-spacing="1">G</tspan><tspan x="27.798" y="-12" font-family="Liberation Serif" font-style="normal" font-size="28" letter-spacing="1">2</tspan></text>
+</svg>

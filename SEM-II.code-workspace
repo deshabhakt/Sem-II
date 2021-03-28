@@ -5,13 +5,14 @@
 		},
 		{
 			"path": "MachineLearning/ML-Programs"
-		},
-		{
-			"path": "../CompetitiveProgramming/gfg"
 		}
 	],
 	"settings": {
 		"python.pythonPath": "C:\\Users\\Deshabhakt\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
-		"jupyter.jupyterServerType": "local"
+		"jupyter.jupyterServerType": "local",
+		"files.associations": {
+			"valarray": "cpp",
+			"iostream": "cpp"
+		}
 	}
 }
