@@ -18,13 +18,13 @@ y0 = 2
 e = 0.0001
 
 f1 = lambda x,y: (x**2) + (y**2) - 9
-f2 = lambda x,y: (x**2) - (y) - 9
+f2 = lambda x,y: (x**2) - (y**2) -25
 
 f1x1 = lambda x,y: 2*x
 f1y1 = lambda x,y: 2*y
 
 f2x2 = lambda x,y: 2*x
-f2y2 = lambda x,y: 1
+f2y2 = lambda x,y: 2*y
 
 
 i=1
