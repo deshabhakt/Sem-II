@@ -1,5 +1,14 @@
 import numpy as np
 
+def printMatrix(V):
+    m = len(V)
+    n = len(V[0])
+    for i in range(m):
+        for j in range(n):
+                print(f'{V[i][j]:10.05f}' ,  end="  ")
+        print()
+    print()
+    
 def matrixInput():
     m = int(input("Enter row size :"))
     n = int(input("Enter column size :"))
@@ -55,14 +64,7 @@ def QRDecomp(A):
     return Q,R
 
 
-def printMatrix(V):
-    m = len(V)
-    n = len(V[0])
-    for i in range(m):
-        for j in range(n):
-                print(f'{V[i][j]:10.05f}' ,  end="  ")
-        print()
-    print()
+
 
 # Default Input
 
