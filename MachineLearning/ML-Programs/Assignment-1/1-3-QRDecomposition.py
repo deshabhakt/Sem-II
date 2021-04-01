@@ -11,7 +11,7 @@ def matrixInput():
         for j in range(n):
             A[i][j] = float(input())
     
-    return (A,n)
+    return A
 
 
 def Normalize(v):
@@ -89,4 +89,4 @@ printMatrix(R)
 
 # Uncomment following lines for custom input
 
-# A,n = matrixInput()
+# A = matrixInput()
