@@ -39,10 +39,9 @@ n = 3
 
 A = np.array([
     [1,2,4],
-    [0,0,5],
-    [0,3,6]
+    [3,8,14],
+    [2,6,13]
 ])
-
 
 L,U = LUDecomposition(A,n)
 print("L = ")

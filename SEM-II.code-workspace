@@ -11,14 +11,18 @@
 		},
 		{
 			"path": "../../Extras/ML-Udemy/Machine Learning A-Z (Codes and Datasets)"
+		},
+		{
+			"path": "../CompetitiveProgramming"
 		}
 	],
 	"settings": {
-		"python.pythonPath": "C:\\Users\\Deshabhakt\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+		"python.pythonPath": "/usr/bin/python3",
 		"jupyter.jupyterServerType": "local",
 		"files.associations": {
 			"valarray": "cpp",
-			"iostream": "cpp"
+			"iostream": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }
