@@ -35,6 +35,7 @@ def LUDecomposition(A,n):
 
     return L,U
 
+
 n = 3
 
 A = np.array([
