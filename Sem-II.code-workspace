@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": ".ipynb_checkpoints"
+		},
+		{
+			"path": "NumericalMethods/NM-Programs"
+		},
+		{
+			"path": "MachineLearning/ML-Programs"
+		},
+		{
+			"path": "../CompetitiveProgramming/OOP-and-STL"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}
