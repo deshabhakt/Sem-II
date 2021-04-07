@@ -11,11 +11,15 @@
 		},
 		{
 			"path": "../CompetitiveProgramming/OOP-and-STL"
+		},
+		{
+			"path": "../CompetitiveProgramming/DSA-Practise"
 		}
 	],
 	"settings": {
 		"files.associations": {
-			"iostream": "cpp"
+			"iostream": "cpp",
+			"ostream": "cpp"
 		}
 	}
 }
