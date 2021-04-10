@@ -10,10 +10,7 @@
 			"path": "MachineLearning/ML-Programs"
 		},
 		{
-			"path": "../CompetitiveProgramming/OOP-and-STL"
-		},
-		{
-			"path": "../CompetitiveProgramming/DSA-Practise"
+			"path": "BigDataAnalytics/BigData-Programs"
 		}
 	],
 	"settings": {
@@ -21,6 +18,7 @@
 			"iostream": "cpp",
 			"ostream": "cpp",
 			"random": "cpp"
-		}
+		},
+		"jupyter.jupyterServerType": "local"
 	}
 }
