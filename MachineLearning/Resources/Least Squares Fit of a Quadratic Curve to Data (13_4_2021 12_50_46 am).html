@@ -1,0 +1,82 @@
+<html style><!--
+ Page saved with SingleFile 
+ url: file:///mnt/General_Stuff/Study%20Stuff/Documents/CDS/Sem-II/MachineLearning/Least%20Squares%20Fit%20of%20a%20Quadratic%20Curve%20to%20Data.html 
+ saved date: Tue Apr 13 2021 00:50:46 GMT+0530 (India Standard Time)
+--><meta charset=utf-8>
+<title>Least Squares Fit of a Quadratic Curve to Data</title>
+<link type=image/x-icon rel="shortcut icon" href=data:undefined;base64,></head>
+<body vlink=#551a8b text=#000000 link=#0000ff bgcolor=#c0c0c0 alink=#ff0000>
+<h1>Least Squares Fit of a Quadratic Curve to Data</h1>
+This time around, I'll use an example that many people have seen in High School physics class. 
+An apparatus is available that marks a strip of paper at even intervals in time. The paper is pulled
+through the marker by a falling weight. By measuring the positions of the points on the strip
+(distance fallen), it is possible to obtain a value for "g", the acceleration of gravity.
+<p>The laws of motion say that the distance fallen is given by the equation:
+<p><img src=data:undefined;base64, width=100% align=middle>Gravitational acceleration can be deduced if we can find a best fit of the data to a general
+quadratic equation:
+<p><img src=data:undefined;base64, width=100% align=middle><img src=data:undefined;base64, width=100% align=right>
+<p>I've selected subscript notation for the coefficients in the quadratic to fit into matrix notation. I
+will also use subscript notation to keep track of data values. The time of the <em>ith</em> data point is t<sub>i</sub>,
+and the measured distance from the start to that point is d<sub>i</sub>. The total number of data points is "n".
+<br wp=br1><br wp=br2>
+<p>As with a linear fit, the concept of "best fit" requires definition of some measure of the error
+between the data and the fit curve. The functional form for error is a simple generalization of the
+linear error function:
+<p><img src=data:undefined;base64, width=100% align=middle>As<a href=http://www.personal.psu.edu/jhm/f90/lectures/lsq1.html> before</a>, the minimum error is at the point where the partial derivatives of the error function with
+respect to the coefficients are all zero.
+<br wp=br1><br wp=br2>
+<p>The equation resulting from evaluating the partial derivative with respect to c<sub>1</sub> is:
+<br wp=br1><br wp=br2>
+<p><img src=data:undefined;base64, width=100% align=middle>Dividing both sides of the final form by 2 and rearranging gives:
+<p><img src=data:undefined;base64, width=100% align=middle>
+<p>The equation resulting from evaluating the partial derivative with respect to c<sub>2</sub> is:
+<br wp=br1><br wp=br2>
+<p><img src=data:undefined;base64, width=100% align=middle>Dividing both sides of the final form by 2 and rearranging gives:
+<p><img src=data:undefined;base64, width=100% align=middle>
+<p>The equation resulting from evaluating the partial derivative with respect to c<sub>3</sub> is:
+<br wp=br1><br wp=br2>
+<p><img src=data:undefined;base64, width=100% align=middle>Dividing both sides of the final form by 2 and rearranging gives:
+<p><img src=data:undefined;base64, width=100% align=middle>
+<p>:
+<br wp=br1><br wp=br2>
+<br wp=br1><br wp=br2>
+<p>Using standard notation for linear algebra, these three equations can be written as:
+<br wp=br1><br wp=br2>
+<br wp=br1><br wp=br2>
+<p><img src=data:undefined;base64, width=100% align=middle>This can now be translated into Fortran for solution. The program <a href=http://www.personal.psu.edu/jhm/f90/examples/leastsq/lsq.html>lsq.f</a> implements the equations
+in a form very similar to the above notation. However other approaches are more efficient. Take
+a look at <a href=http://www.personal.psu.edu/jhm/f90/examples/leastsq/lsq2.html>lsq2.f</a>, <a href=http://www.personal.psu.edu/jhm/f90/examples/leastsq/lsqn.html>lsq3.f</a>, and the following use of Fortran 90 intrinsic functions. Assume that the
+arrays "t" and "d" contain the "n" data points (see the file <a href=http://www.personal.psu.edu/jhm/f90/examples/leastsq/fall.data>fall.data</a>). Then we load a Fortran
+doubly dimensioned array as
+<br wp=br1><br wp=br2>
+<p> a(1,1) = n
+<p> a(1,2) = sum(t(1:n))
+<p> a(1,3) = dot_product(t(1:n),t(1:n))
+<p> a(2,1) = a(1,2)
+<p> a(2,2) = a(1,3)
+<p> a(2,3) = sum(t(1:n)**3)
+<p> a(3,1) = a(1,3)
+<p> a(3,2) = a(2,3)
+<p> a(3,3) = sum(t(1:n)**4)
+<br wp=br1><br wp=br2>
+<p>The array for the right hand side can be set as:
+<br wp=br1><br wp=br2>
+<p> rhs(1) = sum(d(1:n))
+<p> rhs(2) = dot_product (d(1:n)*t(1:n))
+<p> rhs(3) = sum ( d(1:n)*t(1:n)**2)
+<br wp=br1><br wp=br2>
+<p>These two arrays can be passed to an appropriate linear system solver to obtain the values for the
+coefficients.
+<p>My interest, here, is showing you how to generate a curve that in a well defined way comes close
+to a set of data. However, if I was serious about experimentally determining the value of "g", I
+would still have some work to do. Enough information exists in this problem to make a
+meaningful statement about the uncertainty in my value for "g". If a coefficient resulting from a
+least squares fit is important to you, take the time to learn the uncertainty methodology from a
+good text on statistical or experimental methods.
+<br wp=br1><br wp=br2>
+<p><hr>
+<strong>Back to the <a href=http://www.personal.psu.edu/jhm/f90/lectures/34.html>Lecture</a> / </strong><a href="http://www.personal.psu.edu/jhm/f90/lectures/url=quickref.html">Table of Contents</a><strong> / </strong><a href="http://www.personal.psu.edu/jhm/f90/lectures/url=../201.html">Home</a><strong></strong>
+<p><hr>
+<em>Written and Maintained by <a href="http://www.personal.psu.edu/jhm/f90/lectures/url=http://cac.psu.edu/~jhm/jhm.html">John Mahaffy</a> : <a href="http://www.personal.psu.edu/jhm/f90/lectures/url=mailto:jhm@psu.edu">jhm@psu.edu</a></em>
+<p><hr>
+<em></em>
