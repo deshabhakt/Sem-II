@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "BigDataAnalytics/BigData-Programs"
+		},
+		{
+			"path": "../CompetitiveProgramming/DP-AdityaVerma"
+		},
+		{
+			"path": "../CompetitiveProgramming/CompetitiveProgrammingPractise"
 		}
 	],
 	"settings": {
