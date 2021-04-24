@@ -1,0 +1,22 @@
+directory == '/mnt/General_Stuff/Study Stuff/Documents/CDS/Sem-II/BigDataAnalytics/BigData-Programs/Mini-Project/Data'
+country_lst = ['Australia','Canada','China','France','Germany','India','Iran','Italy','Japan','Netherlands','South Korea','Spain','Taiwan','United Kingdom', 'United States']
+
+
+TITLE-ABS-KEY(Artificial Intelligence) AND ( LIMIT-TO ( DOCTYPE,"ar" ) OR LIMIT-TO ( DOCTYPE,"ENGI" ) OR LIMIT-TO ( DOCTYPE,"Artificial Intelligence" ) )
+
+
+['Author(s) ID	','Source title','Volume', 'Issue', 'Art. No.', 'Page start', 'Page end', 'Page count', 'DOI', 'Link', 'Document Type', 'Publication Stage', 'Open Access', 'Source', 'EID']
+
+
+UK          --
+Germany     --
+Spain       --
+Canada      --
+Italy       --
+Japan       --
+France      --
+Australia   --
+South Korea --
+Iran        --
+Taiwan      --
+Netherlands --
