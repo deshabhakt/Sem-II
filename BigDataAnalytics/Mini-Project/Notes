@@ -5,6 +5,9 @@ country_lst = ['Australia','Canada','China','France','Germany','India','Iran','I
 TITLE-ABS-KEY(Artificial Intelligence) AND ( LIMIT-TO ( DOCTYPE,"ar" ) OR LIMIT-TO ( DOCTYPE,"ENGI" ) OR LIMIT-TO ( DOCTYPE,"Artificial Intelligence" ) )
 
 
+TITLE-ABS-KEY(Artificial Intelligence) AND ( LIMIT-TO ( DOCTYPE,"ar" ) OR LIMIT-TO ( DOCTYPE,"ENGI" ) OR LIMIT-TO ( DOCTYPE,"Artificial Intelligence" ) ) AND ( LIMIT-TO ( FUND-SPONSOR,"National Natural Science Foundation of China" ) OR LIMIT-TO ( FUND-SPONSOR,"National Institutes of Health" ) OR LIMIT-TO ( FUND-SPONSOR,"U.S. Department of Health and Human Services" ) OR LIMIT-TO ( FUND-SPONSOR,"National Science Foundation" ) OR LIMIT-TO ( FUND-SPONSOR,"European Commission" ) )
+
+
 ['Author(s) ID	','Source title','Volume', 'Issue', 'Art. No.', 'Page start', 'Page end', 'Page count', 'DOI', 'Link', 'Document Type', 'Publication Stage', 'Open Access', 'Source', 'EID']
 
 
