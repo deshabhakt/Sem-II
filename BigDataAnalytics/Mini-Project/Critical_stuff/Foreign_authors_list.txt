@@ -32878,7 +32878,6 @@ Safar, B.
 Rosenberg, S.
 Itti, R.
 Benjelloun, L.
-M., N.
 Nanard, J.
 Grewal, D.
 Kopalle, P.K.
@@ -50253,7 +50252,6 @@ Tuyen, T.T.
 Yen, H.P.H.
 Vu, T.T.
 Papageorgiou, K.
-S., C.
 Bantilan, M.C.S.
 Koliwad, S.
 Toropov, A.A.
@@ -50455,8 +50453,6 @@ Alhyari, S.
 Wazid, M.
 Haldorai, A.
 Jesline, D.
-G., S.S.
-K., M.
 Mall, R.K.
 Lekshmi Sree, B.
 Medhane, D.V.
