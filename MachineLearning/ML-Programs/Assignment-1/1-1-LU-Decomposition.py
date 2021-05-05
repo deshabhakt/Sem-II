@@ -1,5 +1,6 @@
 import numpy as np
 import copy 
+import sympy as sp
 
 # print("Enter the size of matrix: ")
 # n= int(input())
@@ -46,7 +47,7 @@ A = np.array([
 
 L,U = LUDecomposition(A,n)
 print("L = ")
-printMatrix(L)
+sp.pprint(sp.Matrix(L))
 
 print("U = ")
-printMatrix(U)
+sp.pprint(sp.Matrix(U))

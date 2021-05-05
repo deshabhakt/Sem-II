@@ -1,10 +1,13 @@
 from math import *
+import sympy as sp
+
 
 MaxIterations = 10000000
 
 # Implementing Newton Raphson Method
 
 def newtonRaphson(x0,e,N=MaxIterations):
+    
     print('\n\n*** NEWTON RAPHSON METHOD IMPLEMENTATION ***')
     step = 1
 
@@ -56,4 +59,4 @@ e  = 0.001
 # N = int(input('Maximum Step: '))
 
 # Starting Newton Raphson Method
-newtonRaphson(x0,e)
+newtonRaphson(f,x0,e)
