@@ -41,8 +41,10 @@ print('polynomial eqn:\n',Y,'\n\nEvaluated value of the polynomial:\n',e)
 X=sp.Symbol('X')
 
 x=np.array([2,2.75,4])
-df=sp.diff(1/X,X)
+df=sp.diff(sp.sin(x),X)
 
+a = 0
+b = 1
 n=x.size
 y=1
 
@@ -55,11 +57,11 @@ for i in range (n-1):
 fact=1
 for i in range (1,n+1):
     fact=fact*i
-
 Y = sp.expand(y)
-e=abs(df.subs(X,2)*Y.subs(X,3.5)/fact)
+e=abs(df.subs(X,a)*Y.subs(X,b)/fact)
 
 print('function after n diff:\n',df,'\n\noriginal polynomial:\n',y,'\n\nexpanded polynomial:\n',Y,'\n\n max error:\n',e) 
+print(fact)
 
 
 # In[ ]:
